@@ -1,0 +1,44 @@
+/*
+  This styles the body of the web page to have a background colour of #f5f5ff,
+  which is white with a hint of blue, using the background-colour CSS property
+  and a font color of midnightblue using the colour CSS property.
+*/
+body {
+  background-color: #f5f5ff;
+  background-image: url("../images/SaulGoodman.jfif");
+
+  color: rgb(255, 0, 0);
+  font-family: "Comics Sans MS", "Comic Sans", cursive;
+}
+
+/*
+        This styles all h1 tags to be centered and have a font size of 40 px.
+      */
+h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+/*
+        This styles all p tags to have a font size of 24px.
+      */
+p {
+  font-size: 24px;
+}
+
+figure {
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+li {
+  list-style: none;
+  margin: 10px;
+  font-size: 20px;
+}

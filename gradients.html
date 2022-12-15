@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradients</title>
+    <!-- This demonstrates how to create an interanal stylesheet using the style tag -->
+    <style>
+      nav {
+      }
+
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+
+        /*
+            This is how we apply linear gradients to a polygonal area.
+
+            The first parameter is the direction of the linear gradient (can be
+            to top, to bottom, to left, to right, to top left, to bottom right,
+            and so forth, can be a specific degree amount, example: 60deg).
+
+            The next X parameters are the colours to show in the gradient.
+        */
+        background: -o-linear-gradient(#ff9966, #ff5e62);
+        background: -moz-linear-gradient(#ff9966, #ff5e62);
+        background: -webkit-linear-gradient(#ff9966, #ff5e62);
+        background: linear-gradient(#ff9966, #ff5e62);
+
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+        color: #ede4e8;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #top-nav {
+        padding: 0%;
+        margin-top: 0;
+
+        list-style-type: none;
+        overflow: hidden;
+      }
+
+      #top-nav li {
+        float: left;
+        margin: 0;
+      }
+
+      #top-nav a {
+        display: block;
+        padding: 14px 16px;
+        top: 0;
+
+        color: #ede4e8;
+
+        text-align: center;
+        text-decoration: none;
+      }
+
+      #top-nav a:hover,
+      #top-nav a:focus {
+        background-color: rgba(255, 94, 98, 0.5);
+        color: #ede4e8;
+      }
+
+      #top-nav a:active {
+        font-weight: bolder;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 40px;
+        color: #ede4e8;
+      }
+
+      section {
+        width: auto;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px 20px;
+
+        background-color: rgba(164, 111, 114, 0.7);
+
+        border-radius: 20px;
+
+        text-align: center;
+      }
+
+      p {
+        font-size: 24px;
+        color: #ede4e8;
+      }
+
+      #back-to-top {
+        display: -ms-flexbox;
+        display: -moz-box;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+
+        position: fixed;
+        bottom: 20px;
+        right: 10px;
+
+        width: 80px;
+        height: 80px;
+
+        -ms-flex-pack: center;
+        -moz-box-pack: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+
+        border: #121212 solid 2px;
+
+        -moz-border-radius: 40px;
+        -webkit-border-radius: 40px;
+        border-radius: 40px;
+
+        background: -o-linear-gradient(#ff9966, #ff5e62);
+        background: -moz-radial-gradient(#ff9966, #ff5e62);
+        background: -webkit-radial-gradient(#ff9966, #ff5e62);
+        background: radial-gradient(#ff9966, #ff5e62);
+
+        color: #313131;
+
+        text-align: center;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      footer {
+        text-align: center;
+        font-size: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul id="top-nav">
+        <li>
+          <a class="nav-link" href="index.html">Inline CSS</a>
+        </li>
+        <li>
+          <a class="nav-link" href="internal-css.html">Internal CSS</a>
+        </li>
+        <li>
+          <a class="nav-link" href="external-css.html">External CSS</a>
+        </li>
+        <li>
+          <a class="nav-link" href="testing-cascading.html">Cascading CSS</a>
+        </li>
+        <li>
+          <a class="nav-link" href="classes-and-ids.html">Classes and IDS</a>
+        </li>
+        <li>
+          <a class="nav-link" href="divs-and-spans.html">Divs and Spans</a>
+        </li>
+        <li>
+          <a class="nav-link" href="playing-with-external.html">Cool Page</a>
+        </li>
+        <li>
+          <a class="nav-link" href="typography.html">Typography</a>
+        </li>
+        <li>
+          <a class="nav-link" href="backgrounds-and-text.html">Backgrounds</a>
+        </li>
+        <li>
+          <a class="nav-link" href="gradients.html">Gradients</a>
+        </li>
+        <li>
+          <a class="nav-link" href="transforms.html">Transforms</a>
+        </li>
+        <li>
+          <a class="nav-link" href="transitions-and-animations.html">
+            Transitions and Animations
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>Gradients</h1>
+      <section>
+        <p>Mama Mia, this is a gradient</p>
+        <p>Mama Mia, this is a gradient</p>
+        <p>Mama Mia, this is a gradient</p>
+        <p>Mama Mia, this is a gradient</p>
+        <p>Mama Mia, this is a gradient</p>
+        <p>Mama Mia, this is a gradient</p>
+        <p>Mama Mia, this is a gradient</p>
+        <p>Mama Mia, this is a gradient</p>
+        <p>Mama Mia, this is a gradient</p>
+        <p>Mama Mia, this is a gradient</p>
+        <p>Mama Mia, this is a gradient</p>
+        <p>Mama Mia, this is a gradient</p>
+        <p>Mama Mia, this is a gradient</p>
+        <p>Mama Mia, this is a gradient</p>
+        <p>Mama Mia, this is a gradient</p>
+        <p>Mama Mia, this is a gradient</p>
+        <p>Mama Mia, this is a gradient</p>
+        <p>Mama Mia, this is a gradient</p>
+        <p>Mama Mia, this is a gradient</p>
+        <p>Mama Mia, this is a gradient</p>
+        <p>Mama Mia, this is a gradient</p>
+      </section>
+
+      <a href="#top" id="back-to-top">
+        Back <br />
+        to Top
+      </a>
+    </main>
+
+    <footer>
+      <hr />
+      <p>&#169;Gavin</p>
+      <br />
+    </footer>
+  </body>
+</html>

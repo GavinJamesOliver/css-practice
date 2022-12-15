@@ -4,44 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Classes and Ids</title>
+    <title>Backgrounds and Text</title>
     <!-- This demonstrates how to create an interanal stylesheet using the style tag -->
     <style>
-      /*
-        This styles the body of the web page to have a background colour of #f5f5ff,
-        which is white with a hint of blue, using the background-colour CSS property
-        and a font color of midnightblue using the colour CSS property.
-      */
       body {
-        background-color: #f5f5ff;
+        background-image: url("images/Tacos.jpg");
+        background-size: 100%;
         color: midnightblue;
       }
 
-      /*
-        This styles every ul that is inside the nav (due to descendandt selectors) to
-        have no bullet points beside each list item in the ul.
-      */
       nav ul {
         list-style: none;
       }
 
-      /*
-        This styles every list item in the ul that is in the nav to have 10px of margin,
-        and a font size of 20px.        
-      */
       nav ul li {
         display: inline-block;
         margin: 10px;
         font-size: 20px;
       }
 
-      /*
-        This styles the multiple elements with a  class of nav-link to have a 4px margin,
-        a 2px border that is a solid black line, padding of 5px, a background color of 
-        #191970, and a font color of #f5f5ff.
-
-        NOTE: Could use nav a if you are a fan of descendandt
-      */
       .nav-link {
         margin: 4px;
         border: 2px solid black;
@@ -51,31 +32,48 @@
         color: #f5f5ff;
       }
 
-      /*
-        This styles all h1 tags to be centered and have a font size of 40 px.
-      */
       h1 {
         text-align: center;
+        background-color: #e8f4f8;
+        width: auto;
+        height: 50px;
         font-size: 40px;
       }
 
-      /*
-        This styles all p tags to have a font size of 24px.
+      /* 
+        This styles all the divs on the web page to have a background colour
+        of ligh blue, sets the div to use the autpmatic width of the div, and
+        sets the height to 200px. This also styles the border to have a width
+        of 4px with a solid black line, rounds the corners of the div to have
+        a radius of 20px and 10px padding on the top and bottom and 20px on the
+        left and right. Finally, aligns the text center.
       */
+      div {
+        background-color: #e8f4f8;
+        width: auto;
+        height: 200px;
+        border: 4px solid black;
+        border-radius: 20px;
+        padding: 10px 20px;
+        text-align: center;
+      }
+
       p {
         font-size: 24px;
       }
 
-      /*
-        This styles the one element with an ID of styled-by-id to use the Georgia
-        font. If the Georgia font cannot be used, it uses Times New Roman. If Times
-        New Roman cannot be used, Cambria is used. If Cambria cannot be used, the
-        default serif font built into the browser is used. It also styles the text
-        to be bolded.
-      */
       #styled-by-id {
         font-family: Georgia, "Times New Roman", Cambria, serif;
         font-weight: bold;
+      }
+
+      /*
+        This styles all spans on the webpag to underline the text insiside
+        the span and change the text to italicized.
+      */
+      span {
+        text-decoration: underline;
+        font-style: italic;
       }
     </style>
   </head>
@@ -124,11 +122,33 @@
     </nav>
 
     <main>
-      <h1>Classes and IDS</h1>
-      <p id="styled-by-id">
-        This paragraph will show the effect of giving an element an ID and
-        styling that ID.
-      </p>
+      <h1>Tacos</h1>
+
+      <!--
+        NOTE: This is not the proper way to use a div because I have not used all
+        the proper semantic tags yet.
+
+        This is a div which is short for division. It is a block element that acts
+        like a container for multiple block elements.
+      -->
+      <div>
+        <!--
+          This demonstrates the use of SPAN, which is an inline element used to
+          group multiple inline elements. It can also be used to style specific
+          words or sets of words inside other HTML elements, which is how it is
+          being used in this context.
+        -->
+        <p id="styled-by-id">
+          I like to eat tacos.
+          <span>TACOS!!!!</span>
+        </p>
+        <p>
+          I like to eat tacos, they are tasty. Way better than a Big Mac. Taco
+          Taco Taco, Taco Taco Taco, Taco Taco Taco. TAAAACOOO Tuesday is my
+          favourite day, I like to eat tacos day after day, Big Macs are not
+          here to stay. Tacos are so good they put you into shock-o.
+        </p>
+      </div>
     </main>
   </body>
 </html>

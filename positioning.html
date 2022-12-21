@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradients</title>
+    <!-- This demonstrates how to create an interanal stylesheet using the style tag -->
+    <style>
+      nav {
+        /*
+          Visibility hidden makes something invisible but still saves the space
+          taken up by this element.
+
+          By default set to visible
+        */
+        /* visibility: hidden; */
+
+        /*
+          Hides the element and doesn't save the space for the website.
+
+          Block, inline, inline-block, etc... none makes it nothing
+        */
+        /* display: none; */
+      }
+
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+
+        /*
+            This is how we apply linear gradients to a polygonal area.
+
+            The first parameter is the direction of the linear gradient (can be
+            to top, to bottom, to left, to right, to top left, to bottom right,
+            and so forth, can be a specific degree amount, example: 60deg).
+
+            The next X parameters are the colours to show in the gradient.
+        */
+        background: -o-linear-gradient(#ff9966, #ff5e62);
+        background: -moz-linear-gradient(#ff9966, #ff5e62);
+        background: -webkit-linear-gradient(#ff9966, #ff5e62);
+        background: linear-gradient(#ff9966, #ff5e62);
+
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+        color: #ede4e8;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #top-nav {
+        padding: 0%;
+        margin-top: 0;
+
+        position: fixed;
+        top: 500px;
+
+        list-style-type: none;
+        overflow: hidden;
+        z-index: 20;
+      }
+
+      #top-nav li {
+        float: left;
+        width: 50%;
+        margin: 0;
+      }
+
+      #top-nav a {
+        /*
+          Changed the achors to inline-block elements because they were inline
+          and inline elements can't have their widths and heights changed.
+        */
+        display: inline-block;
+        width: 100%;
+        padding: 14px 16px;
+        top: 0;
+
+        color: #ede4e8;
+
+        text-align: center;
+        text-decoration: none;
+      }
+
+      #top-nav a:hover,
+      #top-nav a:focus {
+        background-color: rgba(255, 94, 98, 0.5);
+        color: #ede4e8;
+      }
+
+      #top-nav a:active {
+        font-weight: bolder;
+      }
+
+      /*
+        Styles H1 to be sticky. Works like relative until the user 
+        reaches a scroll position defined by the top, left, bottom, 
+        or right CSS properties.
+
+        In this case the heading will be in the normal flow of the 
+        website until the user scrolls to the point where the heading 
+        reaches the top of the window. At that point the heading will
+        stick to the top of the window.
+      */
+      h1 {
+        text-align: center;
+        font-size: 40px;
+        color: #ede4e8;
+        background-color: #121212;
+
+        position: sticky;
+        top: 0;
+
+        /*
+          Makes it so it shows up on top of elements with the lower
+          z-index than 500.
+
+          Only works on positioned elements, (i.e., not static)
+        */
+        z-index: 500;
+      }
+
+      section {
+        width: auto;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px 20px;
+
+        background-color: rgba(164, 111, 114, 0.7);
+
+        border-radius: 20px;
+
+        text-align: center;
+      }
+
+      p {
+        font-size: 24px;
+        color: #ede4e8;
+      }
+
+      #back-to-top {
+        display: -ms-flexbox;
+        display: -moz-box;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+
+        position: fixed;
+        bottom: 20px;
+        right: 10px;
+
+        width: 80px;
+        height: 80px;
+
+        -ms-flex-pack: center;
+        -moz-box-pack: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+
+        border: #121212 solid 2px;
+
+        -moz-border-radius: 40px;
+        -webkit-border-radius: 40px;
+        border-radius: 40px;
+
+        background: -o-linear-gradient(#ff9966, #ff5e62);
+        background: -moz-radial-gradient(#ff9966, #ff5e62);
+        background: -webkit-radial-gradient(#ff9966, #ff5e62);
+        background: radial-gradient(#ff9966, #ff5e62);
+
+        color: #313131;
+
+        text-align: center;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      section:first-of-type {
+        top: 100px;
+        left: 150px;
+        border: 4px black solid;
+        position: relative;
+      }
+
+      footer {
+        margin-top: 50%;
+        text-align: center;
+        font-size: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul id="top-nav">
+        <li>
+          <a class="nav-link" href="index.html">Inline CSS</a>
+        </li>
+        <li>
+          <a class="nav-link" href="internal-css.html">Internal CSS</a>
+        </li>
+        <li>
+          <a class="nav-link" href="external-css.html">External CSS</a>
+        </li>
+        <li>
+          <a class="nav-link" href="testing-cascading.html">Cascading CSS</a>
+        </li>
+        <li>
+          <a class="nav-link" href="classes-and-ids.html">Classes and IDS</a>
+        </li>
+        <li>
+          <a class="nav-link" href="divs-and-spans.html">Divs and Spans</a>
+        </li>
+        <li>
+          <a class="nav-link" href="playing-with-external.html">Cool Page</a>
+        </li>
+        <li>
+          <a class="nav-link" href="typography.html">Typography</a>
+        </li>
+        <li>
+          <a class="nav-link" href="backgrounds-and-text.html">Backgrounds</a>
+        </li>
+        <li>
+          <a class="nav-link" href="gradients.html">Gradients</a>
+        </li>
+        <li>
+          <a class="nav-link" href="transforms.html">Transforms</a>
+        </li>
+        <li>
+          <a class="nav-link" href="transitions-and-animations.html">
+            Transitions and Animations
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>Gradients</h1>
+
+      <div style="position: static; border: 3px solid #ff5e62">
+        <p>
+          This is a static element. Well not really it's more of a static
+          container with inline styling I guess.
+        </p>
+      </div>
+
+      <!-- 
+        Relative makes the section appear like it's in the normal flow of the
+        website, can be shifted with top, left, bottom, and right.
+      -->
+      <div
+        style="
+          position: relative;
+          top: 30px;
+          left: 39px;
+          border: 3px solid #ff5e62;
+        ">
+        <p>
+          This is positioned relatively. Meaning it's position relaltive to it's
+          normal position.
+        </p>
+
+        <div
+          style="
+            position: absolute;
+            top: 30px;
+            left: 39px;
+            border: 3px solid #ff5e62;
+          ">
+          <p>
+            This is positioned absolute. Meaning it's positioned relative to the
+            its parent.
+          </p>
+        </div>
+      </div>
+
+      <div style="position: sticky; top: 0; border: 3px solid #ff5e62">
+        <p>STICKY!!!</p>
+      </div>
+
+      <div
+        style="
+          position: fixed;
+          top: 30px;
+          left: 39px;
+          border: 3px solid #ff5e62;
+        ">
+        <p>
+          This is positioned fixed. Meaning it's positioned relative to the
+          viewport. It will always stay in the same place even when scrolled.
+        </p>
+      </div>
+
+      <section>
+        <p>THIS IS A SECTION</p>
+      </section>
+
+      <p>
+        COKE A COLA IS A DRINK, COCA COLA MAKES YOU BLINK (Gets punched in the
+        face)
+      </p>
+
+      <a href="#top" id="back-to-top">
+        Back <br />
+        to Top
+      </a>
+    </main>
+
+    <footer>
+      <p>&#169;Gavin</p>
+      <br />
+    </footer>
+  </body>
+</html>
